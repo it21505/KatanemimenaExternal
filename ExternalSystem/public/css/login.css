@@ -1,0 +1,83 @@
+body,html{
+    height: 100%;
+    margin: 0;
+}
+
+.top{
+	width:100%;
+    height:53px;
+    background-color:#262626;
+}
+
+.border{
+    height : 210px;
+    width: 400px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    text-align: center;
+    padding: 25px 0px 40px 0px;
+    background-color: white;
+    border-radius: 3px;
+    opacity: 0.9;
+}
+
+input{
+    width: 80%;
+    height: 35px;
+    border :none;
+    border: 1px solid grey;
+    border-radius: 2px;
+    box-sizing: border-box;
+    padding: 10px 15px;
+    margin-bottom: 15px;
+}
+
+button{
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 55px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 2px;
+   margin-bottom: 10px;
+}
+
+.error{
+	font-size:18px;
+}
+
+.border1 {
+    height: 280px;
+    width: 400px;
+    float: left;
+    text-align: center;
+    padding: 25px 0px 40px 0px;
+    margin: 70px 110px 0px 150px;
+    background-color: white;
+    border-radius: 3px;
+    opacity: 0.9;
+    border: 1px solid grey;
+    border-radius: 4px;
+}
+
+
+.border2{
+    height : 770px;
+    width: 600px;
+    float:left;
+    text-align: center;
+    padding: 25px 0px 20px 0px;
+    margin: 70px 60px 0px 60px;
+    background-color: white;
+    border-radius: 3px;
+    opacity: 0.9;
+    border: 1px solid grey;
+    border-radius: 4px;
+}

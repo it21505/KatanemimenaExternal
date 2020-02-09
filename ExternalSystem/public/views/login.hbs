@@ -1,0 +1,75 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="../css/login.css" type="text/css" rel="stylesheet">
+<meta charset="UTF-8">
+<title>Student Login</title>
+</head>
+<body>
+  <div class="top"></div>
+<div class="border1">
+
+   <form action="authenticate" method="POST">
+       <h2><b>Student Login</b></h2>
+       <p>Type your user credentials to login.</p>
+                   <input type="text" name="username" placeholder="Username" required/>
+                   <input type="password" name="password" placeholder="Password" required/>
+                   <button  type="submit">Login</button><br>
+
+                  <!-- <a href="register">Don't have an account ? </a>-->
+   </form>
+    <div id="loginerror" ></div>
+</div>
+    <script>
+        console.log(window.location.search);
+        if(!window.location.search==""){
+            console.log(window.location.search);
+           var div = document.getElementById('loginerror');
+           div.className="alert alert-danger";
+           div.role="alert";
+           var li = document.createElement('li');
+           var text = document.createTextNode("Wrong username or password!");
+           li.append(text);
+           div.append(li);
+        }
+
+    </script>
+  <div class="border2">
+      <h2><b>Register</b></h2>
+      <p>Create a new account to have access to the site services.</p>
+      <form action="processRegister" method="post">
+          <input class="input" name="username" type="text" placeholder="Username" aria-describedby="usernameHelp" required />
+          <input class="input" name="password" type="password" placeholder="Password"  aria-describedby="passwordHelp" required />
+          <input class="input" name="name" type="text" placeholder="Name" required />
+          <input class="input" name="surname" type="text" placeholder="Surname" required />
+          <input class="input" name="email" type="email" placeholder="Email" required /><br>
+          <h3>Some basic information of you</h3>
+          <hr width="70%">
+          <br>
+          <input class="input" name="fathername" type="text" placeholder="Father Name" required />
+          <input class="input" name="mothername" type="text" placeholder="Mother Name" required />
+          <input class="input" name="university" type="text" placeholder="University" required />
+          <input class="input" name="department" type="text" placeholder="Department" required />
+          <input class="input" name="semester" type="text" placeholder="Semester" required /><br>
+
+          <button class="button" type="submit">Submit</button>
+      </form>
+      {{#if errors}}
+  <div id="error" style="text-align: left;padding-left:140px"class="alert alert-danger" role="alert">
+        {{#each errors}}
+            <li>{{msg}}</li>
+        {{/each}}
+  </div>
+      {{/if}}
+      {{#if success}}
+          <div id="success" style="text-align: center;" class="alert alert-success" role="alert">
+              You registered successfully !
+          </div>
+      {{/if}}
+
+
+</div>
+
+
+</body>
+</html>
